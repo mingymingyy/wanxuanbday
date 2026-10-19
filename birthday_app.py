@@ -21,7 +21,7 @@ BIRTHDAY = date(2006, 10, 20)
 MESSAGE = (
     "Happy birthday needy beta 🥺👉👈 I hope to spend more time hanging out with you and going "
     "for more friendly hangouts 🍜🧋🤪 You are so sweet and always go out of your way to make "
-    "others feel loved 🥹💗 so I hope you will experience the same for your birthday 🎂🎉🫶\n\n"
+    "others feel loved 🥹💗 so I hope you will experience the same for your birthday 🎂🎉🫶 "
     "I hope you continue being the bubbly and cute girl that you are and stay happy always 🌸😊"
 )
 SIGN_OFF = "With love, always 💗"
