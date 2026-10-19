@@ -1,0 +1,10 @@
+[theme]
+base = "light"
+primaryColor = "#b4466b"
+backgroundColor = "#fffaf4"
+secondaryBackgroundColor = "#fbeeee"
+textColor = "#4a2433"
+font = "'DM Sans':https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+
+[client]
+toolbarMode = "minimal"
