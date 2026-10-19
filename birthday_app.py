@@ -21,7 +21,8 @@ BIRTHDAY = date(2006, 10, 20)
 MESSAGE = (
     "Happy birthday needy beta 🥺👉👈 I hope to spend more time hanging out with you and going "
     "for more friendly hangouts 🍜🧋🤪 You are so sweet and always go out of your way to make "
-    "others feel loved 🥹💗 so I hope you will experience the same for your birthday 🎂🎉🫶"
+    "others feel loved 🥹💗 so I hope you will experience the same for your birthday 🎂🎉🫶\n\n"
+    "I hope you continue being the bubbly and cute girl that you are and stay happy always 🌸😊"
 )
 SIGN_OFF = "With love, always 💗"
 
@@ -272,7 +273,7 @@ CSS = """
 @keyframes unfold { 0% {transform: perspective(900px) rotateX(-70deg); opacity: 0} 100% {transform: none; opacity: 1} }
 .letter p { font-family: 'Fraunces', serif !important; color: var(--ink) !important; }
 .letter .dear { font-style: italic; font-weight: 600; color: var(--rose) !important; font-size: 1.5rem !important; margin: 0 0 .7rem; }
-.letter .body { font-size: 1.18rem !important; line-height: 1.9 !important; margin: 0; }
+.letter .body { font-size: 1.18rem !important; line-height: 1.9 !important; margin: 0 0 1rem; }
 .letter .sign { font-family: 'Caveat', cursive !important; font-size: 1.7rem !important; color: var(--rose) !important; text-align: right; margin: 1.2rem 0 0; }
 
 /* ------------ memories scrapbook */
@@ -564,8 +565,11 @@ def birthday_page(today: date) -> None:
         st.markdown(
             '<div class="letter">'
             f'<p class="dear">Dear {html.escape(NAME)},</p>'
-            f'<p class="body">{keep_emoji_together(html.escape(MESSAGE))}</p>'
-            f'<p class="sign">{keep_emoji_together(html.escape(SIGN_OFF))}</p></div>',
+            + "".join(
+                f'<p class="body">{keep_emoji_together(html.escape(para.strip()))}</p>'
+                for para in MESSAGE.split("\n\n")
+            )
+            + f'<p class="sign">{keep_emoji_together(html.escape(SIGN_OFF))}</p></div>',
             unsafe_allow_html=True,
         )
 
